@@ -67,7 +67,7 @@ class PayOrder extends Model
 					->select(DB::raw('pay_orders.id order_id,pay_orders.status,pay_orders.placetopay_url,pay_orders.placetopay_id,customers.*,articles.article,articles.price'))
 					->get();
 	}
-
+	
 	public function article()
 	{
 		return $this->belongsTo(Article::class);
